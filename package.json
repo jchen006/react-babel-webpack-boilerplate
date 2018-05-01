@@ -14,8 +14,11 @@
   },
   "dependencies": {
     "babel-runtime": "6.x",
+    "material-ui": "^0.20.0",
     "react": "15.x",
-    "react-dom": "15.x"
+    "react-credit-cards": "^0.7.0",
+    "react-dom": "15.x",
+    "react-payment": "^0.1.8"
   },
   "devDependencies": {
     "babel-core": "6.x",
@@ -40,6 +43,7 @@
     "eslint-plugin-react": "latest",
     "husky": "^0.12.0",
     "open-browser-webpack-plugin": "0.0.3",
+    "segmented-control": "^0.1.9",
     "style-loader": "~0.13.1",
     "validate-commit-msg": "2.x",
     "webpack": "1.x",
