@@ -73,7 +73,7 @@ class AddForm extends React.Component {
       })
     }
 
-    // if(this.state.isValid) {
+    if(this.state.isValid) {
       let creditCard = {
         userId: this.props.userId,
         encryption: "",
@@ -85,7 +85,7 @@ class AddForm extends React.Component {
         cardName: this.state.cardName
       }
       this.addCreditCard(creditCard, this.props.handleAddNewCreditCard)
-    // }
+    }
 
   }
 
