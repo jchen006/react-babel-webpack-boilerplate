@@ -16,7 +16,8 @@ class AddForm extends React.Component {
       expiration: "",
       cvv: "",
       type: "",
-      cardName: ""
+      cardName: "",
+      isValid: true
     }
   }
   
@@ -59,7 +60,7 @@ class AddForm extends React.Component {
       this.setState({
         isValid: false,
         error: {
-          expirationDate: "Invalid expiration date"
+          expiration: "Invalid expiration date"
         }
       })
     }
@@ -69,6 +70,17 @@ class AddForm extends React.Component {
         isValid: false,
         error: {
           cvv: "Invalid CVV"
+        }
+      })
+    }
+
+    if(validation.validCardNumber && validation.validExpiryMonth && validation.validExpiryYear && !validation.isExpired && alidation.validCVV) {
+      this.setState({
+        isValid: true,
+        error: {
+          number: "",
+          expiration: "",
+          cvv: ""
         }
       })
     }
